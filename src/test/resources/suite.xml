@@ -1,0 +1,29 @@
+<!-- IMPORTANT: If you copy-paste this snippet to a new XML file in Eclipse, make sure you perform a code re-formatting
+     step (CTRL+SHIFT+F), otherwise the TestNG plugin might not recognize the file as a TestNG suite! -->
+ 
+<suite name="MyFirstSuite">
+  <listeners>
+    <listener class-name="se.ericsson.jcat.fw.fixture.testng.JcatNGTestListener" />
+    <listener class-name="se.ericsson.jcat.fw.fixture.testng.JcatNGSuiteListener" />
+  </listeners>
+ 
+  <test name="TestBlock_1">
+    <classes>
+      <class name="com.ericsson.jcat.handson.testcases.MyFirstTestCase">
+        <methods>
+          <include name="myFirstTest" />
+        </methods>      
+      </class>
+      <class name="com.ericsson.jcat.handson.testcases.MySecondTestCase">
+        <methods>
+          <include name="mySecondTest" />
+        </methods>      
+      </class>
+      <class name="com.ericsson.jcat.handson.testcases.MyThirdTestCase">
+        <methods>
+          <include name="myThirdTest" />
+        </methods>      
+      </class>
+    </classes>
+  </test>
+</suite>
